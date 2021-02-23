@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+body {
+  background-color: #efefef;
+  padding: 0;
+  margin: 0;
+}
+.main-container {
+  border-top: 5px solid #bfbfbf;
+}
+.title,
+.signature {
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 16px;
+}
+.signature {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* grid styles */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.col-9 {
+  max-width: calc(100% / 12 * 9);
+}
+.col-3 {
+  max-width: calc(100% / 12 * 3);
+}
+/* flex styles */
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  line-height: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex-item {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  flex: 1 0 33.33333%;
+  height: auto;
+}
+.flex-item:before {
+  content: "";
+  float: left;
+  padding-top: 100%;
+}
+
+/* cards styles */
+.card > * {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150px;
+}
+
+.card-1,
+.card-8 {
+  background-color: #6f98a8;
+  border-color: #6f98a8;
+  border-width: 0;
+}
+.card-2,
+.card-4 {
+  background-color: #2b8ead;
+  border-color: #2b8ead;
+  border-width: 0;
+}
+.card-3,
+.card-5,
+.card-9 {
+  background-color: #2f454e;
+  border-color: #2f454e;
+  border-width: 0;
+}
+.card-6,
+.card-7 {
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
+  border-width: 0;
+}
+/* buttons styles */
+.button-container {
+  padding: 32px;
+  text-align: center;
+}
+button {
+  padding: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: #72c3dc;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 6px 5px #2b8ead;
+  margin-bottom: 32px;
+}
+button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    background-color: #ffffff;
+  }
+  .title {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  .main-container {
+    border: none;
+    padding: 0 32px;
+  }
+  .row {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .col {
+    min-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+  }
+  .flex-item {
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    flex: 1 0 100%;
+    margin-bottom: 4px;
+  }
+  .flex-item:before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+  }
+  .card > * {
+    color: #000000;
+    width: 100%;
+    font-size: 20px;
+  }
+  .card {
+    background-color: #efefef;
+    border-left-width: 15px;
+    border-style: solid;
+  }
+
+  /* buttons styles */
+  .button-container{
+    padding: 0;
+  }
+  button {
+    width: 25%;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
